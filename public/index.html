@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happywhale - Whale and Dolphin bbox annotation</title>
+    <script src="js/clipboard.min.js"></script>
+    <script src="js/index.js"></script>
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <h1>Happywhale - 🐳&🐬  bounding box annotation</h1>
+    <div id="main_menu">
+        <h2>Participate to the dataset</h2>
+        <div class="button"><a href="annotate.html">✍️ Annotate images</a></div><br>
+        <div class="button"><a href="verify.html">🕵️ Verify annotations</a></div><br>
+    </div>
+    <div id="download_container">
+        <h2>Download the dataset</h2>
+        <div class="button">📄 Raw annotations data</div><br>
+        <div class="button">✅ Official dataset</div><br>
+    </div>
+    <div id="include_container">
+        <h2>Include the dataset in a Kaggle notebook</h2>
+        <div class="code_block">
+            <div class="bx--snippet bx--snippet--single" >
+                <div class="bx--snippet-container">
+                    <code id="include-raw-dataset-code">!curl monadresse/rawdataset</code>
+                </div>
+                <button data-copy-btn data-clipboard-target="#include-raw-dataset-code" class="bx--snippet-button" aria-label="Copy code" tabindex="0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22 6v16h-16v-16h16zm2-2h-20v20h20v-20zm-24 17v-21h21v2h-19v19h-2z"/></svg>
+                    <div class="bx--btn--copy__feedback" data-feedback="Copied!"></div>
+                </button>
+              </div>
+        </div>
+        <div class="code_block">
+            <div class="bx--snippet bx--snippet--single" >
+                <div class="bx--snippet-container">
+                    <code id="include-dataset-code">!curl monadresse/dataset</code>
+                </div>
+                <button data-copy-btn data-clipboard-target="#include-dataset-code" class="bx--snippet-button" aria-label="Copy code" tabindex="0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22 6v16h-16v-16h16zm2-2h-20v20h20v-20zm-24 17v-21h21v2h-19v19h-2z"/></svg>
+                    <div class="bx--btn--copy__feedback" data-feedback="Copied!"></div>
+                </button>
+              </div>
+        </div>
+    </div>
+</body>
+</html>

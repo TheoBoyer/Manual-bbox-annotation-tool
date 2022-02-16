@@ -1,0 +1,68 @@
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.button {
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px;
+    margin: 10px;
+    display: inline-block;
+    transition: 0.2s ease-in-out;
+    font-size: 1.5em;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: #111;
+}
+
+#main_menu .button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#main_menu .button:hover a {
+    color: #111;
+    text-decoration: none;
+}
+
+#main_menu .button, #download_container .button {
+    width: 30vw;
+}
+
+.bx--snippet {
+    background-color: rgb(65, 63, 63);
+    border-radius: 5px;
+    color: rgb(21, 204, 250);
+    display: inline-block;
+    font-size: 14px;
+    margin: 10px;
+    padding: 15px 3vw;
+    text-align: left;
+    width: 40vw;
+    position: relative;
+}
+
+.bx--snippet button {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(calc(-50% + 2px));
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.bx--snippet button svg{
+    fill: #fff;
+    width: 13px;
+}
