@@ -2,6 +2,8 @@ const express = require('express');
 const fs = require("fs");
 const csv = require('csv')
 const app = express();
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
 
 port=3000;
 
@@ -42,9 +44,20 @@ function readData(cb) {
 }
 
 function setupServer() {
-    app.use("/image_to_annotate", (req, res) => {
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: true }));
+    app.use(cookieParser());
+
+    app.get("/image_to_annotate", (req, res) => {
         res.json({
             "image": images_not_annotated[Math.floor(Math.random() * images_not_annotated.length)]
+        })
+    });
+    app.post("/submit_annotation", (req, res) => {
+        console.log('Cookies: ', req.cookies);
+        console.log(req.body);
+        res.json({
+            "received": true
         })
     });
     app.use(express.static('public'));

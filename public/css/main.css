@@ -1,3 +1,8 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: #111;
     color: #fff;
@@ -24,12 +29,12 @@ body {
     color: #111;
 }
 
-#main_menu .button a {
+.button a {
     color: #fff;
     text-decoration: none;
 }
 
-#main_menu .button:hover a {
+.button:hover a {
     color: #111;
     text-decoration: none;
 }

@@ -6,12 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happywhale - Whale and Dolphin bbox annotation</title>
     <script src="js/clipboard.min.js"></script>
-    <script src="js/index.js"></script>
     <script src="js/annotate.js"></script>
+    <script src="js/main.js"></script>
 
+    <link rel="stylesheet" href="css/annotate.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-
+    <div id="image_wrapper">
+        <canvas id="screen"></canvas>
+    </div>
+    <div id="tools">
+        <ul id="buttons_list">
+            <li class="button"><a href="index.html">⬅️ Return to menu</a></li>
+            <li class="button" onclick="deleteLastPoint()">❌ Delete last point</li>
+            <li class="button" onclick="validateBoundingBox()">✅ Validate bounding box</li>
+            <li class="button" onclick="SelectFullImage()">🖼️ Select the total image</li>
+        </ul>
+    </div>
 </body>
 </html>
