@@ -18,6 +18,7 @@
   "homepage": "https://github.com/TheoBoyer/dataset-bbox-manual-annotation#readme",
   "dependencies": {
     "clipboard": "^2.0.10",
+    "csv": "^6.0.5",
     "express": "^4.17.2"
   }
 }
