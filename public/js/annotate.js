@@ -73,26 +73,30 @@ function SelectFullImage() {
     drawBbox();
 }
 
+let setup_cbs = true;
 function setupScreen() {
     screen.width = img_tag.width;
     screen.height = img_tag.height;
 
     points = [];
-    screen.addEventListener("mousemove", (e) => {
-        x = Math.max(0, Math.min(e.offsetX, screen.width));
-        y = Math.max(0, Math.min(e.offsetY, screen.height));
-
-        drawBbox();
-    })
-
-    image_wrapper.addEventListener("click", (e) => {
-        if(points.length >= 2)
-            return
-
-        points.push({x: x, y: y});
-
-        drawBbox();
-    })
+    if(setup_cbs) {
+        screen.addEventListener("mousemove", (e) => {
+            x = Math.max(0, Math.min(e.offsetX, screen.width));
+            y = Math.max(0, Math.min(e.offsetY, screen.height));
+    
+            drawBbox();
+        })
+    
+        image_wrapper.addEventListener("click", (e) => {
+            if(points.length >= 2)
+                return
+    
+            points.push({x: x, y: y});
+    
+            drawBbox();
+        })
+        setup_cbs = false;
+    }
 }
 
 function loadNextImageToAnnotate() {
