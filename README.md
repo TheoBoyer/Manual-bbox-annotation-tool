@@ -2,8 +2,8 @@
 
 ## Context
 This little project is being developped during the [2022 happywhale competition](https://www.kaggle.com/c/happy-whale-and-dolphin).
-As it was noticed by many participants, the individuals within images can be tiny compared to the total image's size, and a lot of elements that may not be informative if not missleading are present in the pictures.
-As such, a participant released a notebook: [Happywhale: Cropped Dataset [YOLOv5] ✂️](https://www.kaggle.com/awsaf49/happywhale-cropped-dataset-yolov5) leveraging an old dataset made for a previous competition involving whale tails.
+As it was noticed by many participants, the individuals within images can be tiny compared to the total image's size, and a lot of elements that may not be informative if not missleading are present in the pictures.<br>
+As such, a participant released a notebook: [Happywhale: Cropped Dataset [YOLOv5] ✂️](https://www.kaggle.com/awsaf49/happywhale-cropped-dataset-yolov5) leveraging an old dataset made for a previous competition involving whale tails.<br>
 The problem is that the resulting dataset contains numerous failure cases and slight inaccuracies that could harm the performances of a model trained on the cropped dataset:
 
 <p float="center">
