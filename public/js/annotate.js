@@ -106,6 +106,13 @@ function loadNextImageToAnnotate() {
     request.onload = () => {
         // Extract the image name from the response
         image_name = JSON.parse(request.responseText).image;
+        if(image_name == null) {
+            error_message.style.zIndex = 2;
+            document.getElementById("delete_last_point_button").style.display="none";
+            document.getElementById("validate_bounding_box_button").style.display="none";
+            document.getElementById("select_total_image_button").style.display="none";
+            return;
+        }
         img_tag.removeAttribute("width");
         img_tag.removeAttribute("height");
         img_tag.src = `/images/${image_name}`;
@@ -113,8 +120,9 @@ function loadNextImageToAnnotate() {
     request.send();
 }
 
-let img_tag, image_wrapper, image_name, d_width, d_height, d_ratio, screen, ctx;
+let img_tag, image_wrapper, image_name, d_width, d_height, d_ratio, screen, ctx, error_message;
 document.addEventListener('DOMContentLoaded', function() {
+    error_message = document.getElementById("error_message");
     image_wrapper = document.getElementById('image_wrapper');
     screen = document.getElementById('screen');
     ctx = screen.getContext('2d');

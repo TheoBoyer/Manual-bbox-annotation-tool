@@ -13,14 +13,17 @@
 </head>
 <body>
     <div id="image_wrapper">
+        <div id="error_message">
+            <p>No more image to annotate...</p>
+        </div>
         <canvas id="screen"></canvas>
     </div>
     <div id="tools">
         <ul id="buttons_list">
             <li class="button"><a href="index.html">⬅️ Return to menu</a></li>
-            <li class="button" onclick="deleteLastPoint()">❌ Delete last point</li>
-            <li class="button" onclick="validateBoundingBox()">✅ Validate bounding box</li>
-            <li class="button" onclick="SelectFullImage()">🖼️ Select the total image</li>
+            <li class="button" id="delete_last_point_button" onclick="deleteLastPoint()">❌ Delete last point</li>
+            <li class="button" id="validate_bounding_box_button" onclick="validateBoundingBox()">✅ Validate bounding box</li>
+            <li class="button" id="select_total_image_button" onclick="SelectFullImage()">🖼️ Select the total image</li>
         </ul>
     </div>
 </body>

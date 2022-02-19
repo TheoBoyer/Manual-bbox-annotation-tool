@@ -20,15 +20,16 @@
     </div>
     <div id="download_container">
         <h2>Download the dataset</h2>
-        <div class="button">📄 Raw annotations data</div><br>
-        <div class="button">✅ Official dataset</div><br>
+        <div class="button"><a href="/data/annotations.csv" download>📄 Raw annotations data</a></div><br>
+        <div class="button"><a href="/data/dataset.csv" download>✅ Official dataset</a></div><br>
     </div>
     <div id="include_container">
         <h2>Include the dataset in a Kaggle notebook</h2>
+        <h3>📄 Raw annotations data</h3>
         <div class="code_block">
             <div class="bx--snippet bx--snippet--single" >
                 <div class="bx--snippet-container">
-                    <code id="include-raw-dataset-code">!curl monadresse/rawdataset</code>
+                    <code id="include-raw-dataset-code">curl http://localhost:3000/data/annotations.csv</code>
                 </div>
                 <button data-copy-btn data-clipboard-target="#include-raw-dataset-code" class="bx--snippet-button" aria-label="Copy code" tabindex="0">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22 6v16h-16v-16h16zm2-2h-20v20h20v-20zm-24 17v-21h21v2h-19v19h-2z"/></svg>
@@ -36,10 +37,11 @@
                 </button>
               </div>
         </div>
+        <h3>✅ Official dataset</h3>
         <div class="code_block">
             <div class="bx--snippet bx--snippet--single" >
                 <div class="bx--snippet-container">
-                    <code id="include-dataset-code">!curl monadresse/dataset</code>
+                    <code id="include-dataset-code">curl http://localhost:3000/data/dataset.csv</code>
                 </div>
                 <button data-copy-btn data-clipboard-target="#include-dataset-code" class="bx--snippet-button" aria-label="Copy code" tabindex="0">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22 6v16h-16v-16h16zm2-2h-20v20h20v-20zm-24 17v-21h21v2h-19v19h-2z"/></svg>

@@ -13,13 +13,16 @@
 </head>
 <body>
     <div id="image_wrapper">
+        <div id="error_message">
+            <p>No more image to verify...</p>
+        </div>
         <canvas id="screen"></canvas>
     </div>
     <div id="tools">
         <ul id="buttons_list">
             <li class="button"><a href="index.html">⬅️ Return to menu</a></li>
-            <li class="button" onclick="submitVerification(false)">❌ Flag as wrong</li>
-            <li class="button" onclick="submitVerification(true)">✅ Validate</li>
+            <li class="button" id="flag_as_wrong_button" onclick="submitVerification(false)">❌ Flag as wrong</li>
+            <li class="button" id="validate_button" onclick="submitVerification(true)">✅ Validate</li>
         </ul>
     </div>
 </body>

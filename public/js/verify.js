@@ -36,6 +36,14 @@ function loadNextImageToVerify() {
     request.onload = () => {
         // Extract the image name from the response
         let response = JSON.parse(request.responseText);
+        
+        if(response.image == null) {
+            error_message.style.zIndex = 2;
+            document.getElementById("flag_as_wrong_button").style.display="none";
+            document.getElementById("validate_button").style.display="none";
+            return;
+        }
+
         x1 = response.x1;
         y1 = response.y1;
         x2 = response.x2;
@@ -62,8 +70,9 @@ function setupScreen() {
     drawBbox();
 }
 
-let img_tag, image_wrapper, image_name, d_width, d_height, d_ratio, screen, ctx;
+let img_tag, image_wrapper, image_name, d_width, d_height, d_ratio, screen, ctx, error_message;
 document.addEventListener('DOMContentLoaded', function() {
+    error_message = document.getElementById("error_message");
     image_wrapper = document.getElementById('image_wrapper');
     screen = document.getElementById('screen');
     ctx = screen.getContext('2d');

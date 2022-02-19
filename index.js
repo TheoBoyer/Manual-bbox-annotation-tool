@@ -245,6 +245,7 @@ function setupServer() {
     });
     app.use(express.static('public'));
     app.use("/images", express.static('images'));
+    app.use("/data", express.static('data'));
     
     app.listen(port, () => {
         console.log(`Example app listening on port ${port}`)
