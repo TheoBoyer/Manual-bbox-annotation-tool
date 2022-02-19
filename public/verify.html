@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happywhale - Whale and Dolphin bbox verification</title>
+    <script src="js/verify.js"></script>
+    <script src="js/main.js"></script>
+
+    <link rel="stylesheet" href="css/verify.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div id="image_wrapper">
+        <canvas id="screen"></canvas>
+    </div>
+    <div id="tools">
+        <ul id="buttons_list">
+            <li class="button"><a href="index.html">⬅️ Return to menu</a></li>
+            <li class="button" onclick="submitVerification(false)">❌ Flag as wrong</li>
+            <li class="button" onclick="submitVerification(true)">✅ Validate</li>
+        </ul>
+    </div>
+</body>
+</html>

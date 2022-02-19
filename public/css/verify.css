@@ -3,13 +3,13 @@
     background-color: #121212;
 }
 
-#image_to_annotate {
+#image_to_verify {
     object-fit: cover;
     max-width: 100%;
     max-height: 100%;
 }
 
-#screen, #image_to_annotate {
+#screen, #image_to_verify {
     position: absolute;
     top: 50%;
     left: 50%;

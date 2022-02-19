@@ -21,10 +21,10 @@ function drawBbox() {
             py = y;
         }
         ctx.lineWidth = 3;
-        let r_x = Math.min(points[0].x, px);
-        let r_y = Math.min(points[0].y, py);
-        let r_w = Math.abs(points[0].x - px);
-        let r_h = Math.abs(points[0].y - py);
+        let r_x = Math.max(Math.min(points[0].x, px) - 1, 0);
+        let r_y = Math.max(Math.min(points[0].y, py) - 1, 0);
+        let r_w = Math.min(Math.abs(points[0].x - px) + 1, screen.width);
+        let r_h = Math.min(Math.abs(points[0].y - py) + 1, screen.height);
         ctx.strokeRect(r_x, r_y, r_w, r_h);
     }
     
@@ -106,6 +106,8 @@ function loadNextImageToAnnotate() {
     request.onload = () => {
         // Extract the image name from the response
         image_name = JSON.parse(request.responseText).image;
+        img_tag.removeAttribute("width");
+        img_tag.removeAttribute("height");
         img_tag.src = `/images/${image_name}`;
     }
     request.send();
@@ -132,7 +134,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (ratio > d_ratio) {
             img_tag.width = d_width;
             img_tag.height = img_tag.width / ratio;
-            img_tag.style.paddingTop = `${(d_height - img_tag.height) / 2}px`;
         } else {
             img_tag.height = d_height;
             img_tag.width = img_tag.height * ratio;
