@@ -32,5 +32,6 @@ On the home page you can find buttons to download directly either the raw annota
 <img src="https://i.imgur.com/MPqax8w.png">
 
 ### Additionnal informations
-* The app doesn't start from scratch, some annotations are already entered and just need a manual review. The annotations were obtained by taking the dataset from [Happywhale: Cropped Dataset [YOLOv5] ✂️](https://www.kaggle.com/awsaf49/happywhale-cropped-dataset-yolov5) and filtered using the methods described in [🐳&🐬 - Filter YOLOv5 failure cases](https://www.kaggle.com/wolfy73/filter-yolov5-failure-cases)
+* The dataset doesn't start from scratch, some annotations were obtained by merging numerous public manual annotations datasets. Here is the notebook to create the annotations: [🐳&🐬 - 👨‍🔬 Merging public bounding box datasets](https://www.kaggle.com/wolfy73/merging-public-bounding-box-datasets)
+* The annotations doesn't start from scratch, some automatic annotations are already entered and just need a manual review. The annotations were obtained by taking the dataset from [Happywhale: Cropped Dataset [YOLOv5] ✂️](https://www.kaggle.com/awsaf49/happywhale-cropped-dataset-yolov5) and filtered using the methods described in [🐳&🐬 - Filter YOLOv5 failure cases](https://www.kaggle.com/wolfy73/filter-yolov5-failure-cases)
 * Only the training images are in the app to comply with the competition's rules 
