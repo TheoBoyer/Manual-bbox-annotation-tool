@@ -52,7 +52,7 @@ body {
     margin: 10px;
     padding: 15px 3vw;
     text-align: left;
-    width: 40vw;
+    width: 60vw;
     position: relative;
 }
 
@@ -82,4 +82,9 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
+}
+
+footer {
+    padding: 25px;
+    color: #ababab
 }
