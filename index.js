@@ -169,28 +169,32 @@ function setupServer() {
         const annotation = annotations.find(annotation => annotation.image === req.body.image);
         annotation.verified = "True";
         annotation.judge_identity = req.cookies.identity;
-            // Remove image from to_verify
+        // Remove image from to_verify
         const index = states.to_verify.indexOf(annotation.image);
         if (index > -1) {
             states.to_verify.splice(index, 1);
         }
         if(req.body.positive) {
             annotation.judge_decision = "accepted";
-            var dataset_annotation = {...annotation};
+            let dataset_annotation = {...annotation};
+            console.log(dataset_annotation)
             let x1 = parseFloat(annotation.x1);
             let y1 = parseFloat(annotation.y1);
             let x2 = parseFloat(annotation.x2);
             let y2 = parseFloat(annotation.y2);
 
-            x1 = Math.min(x1, x2);
-            y1 = Math.min(y1, y2);
-            x2 = Math.max(x1, x2);
-            y2 = Math.max(y1, y2);
+            console.log(x1, y1, x2, y2);
+            ox1 = Math.min(x1, x2);
+            oy1 = Math.min(y1, y2);
+            ox2 = Math.max(x1, x2);
+            oy2 = Math.max(y1, y2);
+            console.log(ox1, oy1, ox2, oy2);
 
-            dataset_annotation.x1 = x1;
-            dataset_annotation.y1 = y1;
-            dataset_annotation.x2 = x2;
-            dataset_annotation.y2 = y2;
+            dataset_annotation.x1 = ox1;
+            dataset_annotation.y1 = oy1;
+            dataset_annotation.x2 = ox2;
+            dataset_annotation.y2 = oy2;
+            console.log(dataset_annotation)
 
             dataset.push(dataset_annotation);
             // append to file
